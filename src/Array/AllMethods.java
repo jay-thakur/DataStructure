@@ -34,4 +34,13 @@ class AllMethods {
             System.out.print(temp+" ");
         }
     }
+
+    int minElement(int[] arr){
+        int min = arr[0];
+        for (int temp:arr) {
+            if (min > temp)
+                min = temp;
+        }
+        return min;
+    }
 }
