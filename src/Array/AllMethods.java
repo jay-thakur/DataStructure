@@ -52,14 +52,35 @@ class AllMethods {
      * @param key element to be search
      * @return binarySearch()
      */
-    int binarySearch(int[] arr, int low, int high, int key){
+    int binarySearchWithRecursion(int[] arr, int low, int high, int key){
         if (high < low)
             return -1;
         int mid = (low + high) / 2;
         if (key == arr[mid])
             return mid;
         if (key > arr[mid])
-            return binarySearch(arr,(mid + 1), high, key);
-        return binarySearch(arr, low, (mid - 1), key);
+            return binarySearchWithRecursion(arr,(mid + 1), high, key);
+        return binarySearchWithRecursion(arr, low, (mid - 1), key);
+    }
+
+    /**
+     * method to search in sorted array i.e; binarySearch
+     * @param arr array of integers
+     * @param low arr min index
+     * @param high arr max index
+     * @param key element to be search
+     * @return index value
+     */
+    int binarySearch(int[] arr, int low, int high, int key){
+        while(low <= high){
+            int mid = (low + high) / 2;
+            if (key < arr[mid])
+                high = mid - 1;
+            else if (key > arr[mid])
+                low = mid + 1;
+            else
+                return mid;
+        }
+        return -1;
     }
 }
