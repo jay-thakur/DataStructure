@@ -27,5 +27,11 @@ public class BasicLinkedList {
         //printing linked list
         System.out.println("*********** Linked List Elements After Inserting are ***********");
         methods.printList(linkedList.head);
+
+        System.out.println("\n---------- Inserting Node at the front ----------");
+        head = methods.insertNodeAtFront(head, 0);
+
+        System.out.println("*********** Linked List Elements After Inserting at front are ***********");
+        methods.printList(linkedList.head);
     }
 }

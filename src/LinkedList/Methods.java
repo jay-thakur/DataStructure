@@ -29,4 +29,11 @@ public class Methods {
         lastNode.next = newNode;
     }
 
+    public Node insertNodeAtFront(Node head, int data){
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+        return head;
+    }
+
 }
