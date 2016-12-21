@@ -36,4 +36,19 @@ public class Methods {
         return head;
     }
 
+    /**
+     * method to count no of nodes in linked list
+     * @param head node
+     * @return count
+     */
+    public int getCount(Node head){
+        int count = 0;
+        Node node = head;
+        while (node != null){
+            node = node.next;
+            count++;
+        }
+        return count;
+    }
+
 }
