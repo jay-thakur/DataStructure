@@ -1,8 +1,9 @@
 package LinkedList;
 
 public class BasicLinkedList {
-    Node head;
-    Methods methods;
+
+    static Node head;
+    static Methods methods = new Methods();
 
     public static void main(String[] args) {
         BasicLinkedList linkedList = new BasicLinkedList();
@@ -19,6 +20,12 @@ public class BasicLinkedList {
 
         //printing linked list
         System.out.println("*********** Linked List Elements are ***********");
-        new Methods().printList(linkedList.head);
+        methods.printList(linkedList.head);
+
+        System.out.println("\n---------- Inserting Node at the tail ----------");
+        methods.insertNodeAtTheTail(head, 4);
+        //printing linked list
+        System.out.println("*********** Linked List Elements After Inserting are ***********");
+        methods.printList(linkedList.head);
     }
 }
