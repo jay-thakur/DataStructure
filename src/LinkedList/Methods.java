@@ -51,4 +51,20 @@ public class Methods {
         return count;
     }
 
+    /**
+     * method to search element
+     * @param head node
+     * @param key element to search
+     * @return boolean
+     */
+    public boolean searchElement(Node head, int key){
+        Node currentNode = head;
+        while (currentNode != null){
+            if (currentNode.data == key)
+                return true;
+            currentNode = currentNode.next;
+        }
+        return false;
+    }
+
 }
