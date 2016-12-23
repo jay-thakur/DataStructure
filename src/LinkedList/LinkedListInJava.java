@@ -38,5 +38,9 @@ public class LinkedListInJava {
             System.out.println("List contains element 'F' & 'G' ");
         else
             System.out.println("List does not contains element 'F' & 'G' ");
+
+        //Length of linked list
+        int size = linkedList.size();
+        System.out.println("Linked list has "+size+" elements");
     }
 }
