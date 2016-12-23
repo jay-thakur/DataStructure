@@ -1,6 +1,7 @@
 package LinkedList;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * A class to implement LinkedList class of java
@@ -20,5 +21,22 @@ public class LinkedListInJava {
         linkedList.add(2, "C"); //add(index, element) - it inserts the element at the given index.
 
         System.out.println("Linked List : "+linkedList );
+
+        //Search elements in linked list
+        boolean isElementFound = linkedList.contains("F");
+        if (isElementFound)
+            System.out.println("List contains element 'F' ");
+        else
+            System.out.println("List does not contains element 'F' ");
+
+        List<String> list = new LinkedList<>();
+        list.add("F");
+        list.add("G");
+
+        boolean isAllListElementFound = linkedList.containsAll(list);
+        if (isAllListElementFound)
+            System.out.println("List contains element 'F' & 'G' ");
+        else
+            System.out.println("List does not contains element 'F' & 'G' ");
     }
 }
