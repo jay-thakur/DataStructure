@@ -49,5 +49,11 @@ public class LinkedListInJava {
 
         linkedList.set(4, "F");
         System.out.println("Linked List after setting a value : "+linkedList );
+
+        //Delete/Remove elements
+        linkedList.remove(4);
+        linkedList.removeLast();
+        linkedList.removeFirst();
+        System.out.println("Linked List after removing elements : "+linkedList );
     }
 }
