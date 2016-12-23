@@ -42,5 +42,12 @@ public class LinkedListInJava {
         //Length of linked list
         int size = linkedList.size();
         System.out.println("Linked list has "+size+" elements");
+
+        //Get & set elements of linked list
+        Object element = linkedList.get(2);
+        System.out.println("Element " +element + " is returned by get()");
+
+        linkedList.set(4, "F");
+        System.out.println("Linked List after setting a value : "+linkedList );
     }
 }
