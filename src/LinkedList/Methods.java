@@ -67,4 +67,23 @@ public class Methods {
         return false;
     }
 
+    /**
+     * method to reverse linked list in iterative way
+     * @param head head node of linked list
+     * @return previousNode
+     */
+    public Node reverseIterative(Node head){
+        Node currentNode = head;
+        Node previousNode = null;
+        Node nextNode = null;
+
+        while(currentNode != null){
+            nextNode = currentNode.next;
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = nextNode;
+        }
+        return previousNode;
+    }
+
 }
