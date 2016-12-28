@@ -86,4 +86,21 @@ public class Methods {
         return previousNode;
     }
 
+    /**
+     * method to reverse linked list in recursive way
+     * @param node node of linked list
+     * @return remainingNode
+     */
+    public Node reverseRecursive(Node node){
+
+        if(node == null || node.next == null)
+            return node;
+
+        Node remainingNode = reverseRecursive(node.next);
+        node.next.next = node;
+        node.next = null;
+
+        return remainingNode;
+    }
+
 }

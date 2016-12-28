@@ -24,5 +24,10 @@ public class ReverseLinkedList {
         head = methods.reverseIterative(linkedList.head);
         methods.printList(linkedList.head);
 
+        System.out.println("\n******** Reverse linked list Recursive way *******");
+
+        head = methods.reverseRecursive(head);
+        methods.printList(linkedList.head);
+
     }
 }
