@@ -103,4 +103,13 @@ public class Methods {
         return remainingNode;
     }
 
+    /**
+     * a method to delete linked list
+     * @param head head node of list
+     * @return head
+     */
+    public Node deleteList(Node head){
+        return (head = null);
+    }
+
 }
