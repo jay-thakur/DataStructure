@@ -19,6 +19,17 @@ public class DeleteOperation {
 
         methods.printList(linkedList.head);
 
+        System.out.println("\n********** Deletion by position ***********");
+        int position = 2;
+        int listLength = methods.getCount(head);
+        if (position >= listLength){
+            System.out.println("There is no element at position "+position);
+        }else{
+            head = methods.deleteElementFromListByPosition(head,position);
+            System.out.println("\n------ After Deleting element at position "+position+" ------");
+            methods.printList(head);
+        }
+
         System.out.println("\n------ After Deleting ------");
         head = methods.deleteList(head);
         if (head == null)

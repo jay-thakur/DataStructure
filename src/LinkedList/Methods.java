@@ -104,6 +104,36 @@ public class Methods {
     }
 
     /**
+     * a method to delete element from list by position
+     * @param head
+     * @param position
+     * @return
+     */
+    public Node deleteElementFromListByPosition(Node head, int position){
+
+        if (head == null)
+            return head;
+
+        //if head node to be removed
+        Node previousNode = head;
+        if (position == 0){
+            head = previousNode.next; // change head
+            return head;
+        }
+        //find previous node of the node to be deleted
+        for (int i=0; previousNode != null && i<position-1; i++)
+            previousNode = previousNode.next;
+
+        // Node previousNode->next is the node to be deleted
+        // Store pointer to the next of node to be deleted
+        Node temp = previousNode.next.next;
+        //Unlink the previousNode->next
+        previousNode.next = temp;
+        //return head
+        return head;
+    }
+
+    /**
      * a method to delete linked list
      * @param head head node of list
      * @return head
