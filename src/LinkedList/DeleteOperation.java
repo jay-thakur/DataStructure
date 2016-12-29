@@ -30,6 +30,15 @@ public class DeleteOperation {
             methods.printList(head);
         }
 
+        System.out.println("\n************ Deletion by Key ************");
+        int key = 2;
+        boolean isKeyFound = methods.searchElement(head, key);
+        if (isKeyFound){
+            head = methods.deleteElementByKey(head, key);
+            methods.printList(head);
+        }else
+            System.out.println("Key is not found in the list");
+
         System.out.println("\n------ After Deleting ------");
         head = methods.deleteList(head);
         if (head == null)

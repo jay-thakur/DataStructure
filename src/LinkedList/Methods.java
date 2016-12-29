@@ -134,6 +134,25 @@ public class Methods {
     }
 
     /**
+     * a method to delete element by key
+     * @param head
+     * @param key
+     * @return head
+     */
+    public Node deleteElementByKey(Node head, int key){
+        Node node, previousNode = null;
+        node = head;
+        if ( node != null && node.data == key)
+            return (head = node.next);
+        while (node != null && node.data != key){
+            previousNode = node;
+            node =node.next;
+        }
+        previousNode.next = node.next;
+        return head;
+    }
+
+    /**
      * a method to delete linked list
      * @param head head node of list
      * @return head
