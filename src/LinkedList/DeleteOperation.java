@@ -25,7 +25,7 @@ public class DeleteOperation {
         if (position >= listLength){
             System.out.println("There is no element at position "+position);
         }else{
-            head = methods.deleteElementFromListByPosition(head,position);
+            head = methods.deleteElementByPosition(head, position);
             System.out.println("\n------ After Deleting element at position "+position+" ------");
             methods.printList(head);
         }

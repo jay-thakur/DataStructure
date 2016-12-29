@@ -109,7 +109,7 @@ public class Methods {
      * @param position
      * @return
      */
-    public Node deleteElementFromListByPosition(Node head, int position){
+    public Node deleteElementByPosition(Node head, int position){
 
         if (head == null)
             return head;
