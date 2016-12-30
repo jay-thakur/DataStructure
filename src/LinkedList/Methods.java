@@ -161,4 +161,28 @@ public class Methods {
         return (head = null);
     }
 
+    /**
+     * this method will merge two sorted list
+     * @param head1 head node of list1
+     * @param head2 head node of list2
+     * @return resultHead
+     */
+    public Node mergeSortedRecursive(Node head1, Node head2){
+        Node resultHead;
+        //Base cases
+        if (head1 == null)
+            return head2;
+        else if (head2 == null)
+            return head1;
+
+        if (head1.data <= head2.data){
+            resultHead = head1;
+            resultHead.next = mergeSortedRecursive(head1.next, head2);
+        }else{
+            resultHead = head2;
+            resultHead.next = mergeSortedRecursive(head1, head2.next);
+        }
+        return resultHead;
+    }
+
 }
